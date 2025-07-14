@@ -65,6 +65,17 @@ StudentManagement/
 📸 Screenshot 
 
 
+<img width="279" height="158" alt="Screenshot 2025-07-14 200249" src="https://github.com/user-attachments/assets/22022a4f-d208-4d2e-a626-3604b8f9f8c9" />
+
+
+
+
+
+
+
+
+
+
 
 
 ---
