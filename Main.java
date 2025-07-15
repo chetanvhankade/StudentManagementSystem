@@ -8,7 +8,7 @@ public class Main
     public static void addStudent()
     {
         Scanner sc=new Scanner(System.in);
-        EntityManager entity = Util.getEntityManagerFactory().createEntityManager();
+        EntityManager entity = HibernateUtil.getEntityManagerFactory().createEntityManager();
         EntityTransaction t = entity.getTransaction();
 
         System.out.print("Enter name ");
@@ -33,7 +33,7 @@ public class Main
 
     public static void viewAllStudents()
     {
-        EntityManager entity = Util.getEntityManagerFactory().createEntityManager();
+        EntityManager entity = HibernateUtil.getEntityManagerFactory().createEntityManager();
         List<Student> students = entity.createQuery("from Student", Student.class).getResultList();
         for (Student s : students) {
             System.out.printf("ID: %d, Name: %s, Age: %d, Course: %s%n", s.getId(), s.getName(), s.getAge(), s.getCourse());
@@ -44,7 +44,7 @@ public class Main
     public static void updateStudent()
     {
         Scanner sc=new Scanner(System.in);
-        EntityManager entity = Util.getEntityManagerFactory().createEntityManager();
+        EntityManager entity = HibernateUtil.getEntityManagerFactory().createEntityManager();
         EntityTransaction t = entity.getTransaction();
         System.out.print("Enter student ID to update: ");
         int id = sc.nextInt();
@@ -75,7 +75,7 @@ public class Main
     public static void deleteStudent()
     {
         Scanner sc=new Scanner(System.in);
-        EntityManager entity = Util.getEntityManagerFactory().createEntityManager();
+        EntityManager entity = HibernateUtil.getEntityManagerFactory().createEntityManager();
         EntityTransaction t = entity.getTransaction();
 
         System.out.print("Enter student ID to delete: ");
